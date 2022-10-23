@@ -30,7 +30,7 @@
 
     if (pais) {
         Swal.fire({
-            title: `Seleccionaste ${pais}`
+            title: `Bienvenido! Seleccionaste ${pais}`
         })
     }
 

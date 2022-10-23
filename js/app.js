@@ -56,22 +56,22 @@ const saveLocal = () => {
 //get item
 
 fetch("products.json")
-.then(function(response){
-   return response.json();
+  .then(function(response){
+    return response.json();
 })
-.then(function(products){
-   let placeholder = document.querySelector("#data-output");
-   let out = "";
-   for(let product of products){
+  .then(function(products){
+    let placeholder = document.querySelector("#data-output");
+    let out = "";
+    for(let product of products){
       out += `
-         <tr>
+          <tr>
             <td> <img src='${product.image}'> </td>
             <td>${product.name}</td>
             <td>${product.price}</td>
             <td>${product.inventory}</td>
-         </tr>
+          </tr>
       `;
-   }
- 
-   placeholder.innerHTML = out;
+    }
+
+    placeholder.innerHTML = out;
 });
